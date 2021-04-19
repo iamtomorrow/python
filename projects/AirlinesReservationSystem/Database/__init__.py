@@ -9,10 +9,10 @@ import mysql.connector as SQLConn;
 
 
 '''conn = SQLConn.connect(
-    host = "localhost",
-    user = "root",
-    password = "Tomorrowuser2021",
-    database = "airlines_system_database_version2"
+    host = "",
+    user = "",
+    password = "",
+    database = ""
 )
 cur = conn.cursor()'''
 
@@ -48,10 +48,10 @@ def insertUserToDatabase(user_id, first_name, second_name, last_name, age, birth
     print("-"*40)
     print("ACCESSING DATABASE")
     conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+        host = "",
+        user = "",
+        password = "",
+        database = ""
     )
     cur = conn.cursor()
     sleep(3);
@@ -90,10 +90,10 @@ def insertUserToDatabase(user_id, first_name, second_name, last_name, age, birth
 def getUserTicketDatabase(user_id, first_name, second_name, last_name):
     print("ACCESSING DATABASE")
     conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+        host = "",
+        user = "",
+        password = "",
+        database = ""
     )
     cur = conn.cursor()
     sleep(3);
@@ -112,10 +112,10 @@ def getUserTicketDatabase(user_id, first_name, second_name, last_name):
 def getFlightSchedule(flightNumber):
     print("ACCESSING DATABASE")
     conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+        host = "",
+        user = "",
+        password = "",
+        database = ""
     )
     cur = conn.cursor()
     sleep(3);
@@ -154,10 +154,10 @@ def getFlightSchedule(flightNumber):
 def displayUserFromDatabase(ID):
     print("ACCESSING DATABASE")
     conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+        host = "",
+        user = "",
+        password = "",
+        database = ""
     )
     cur = conn.cursor()
     sleep(3);
@@ -206,10 +206,10 @@ def addFlightDatabase(flight_id, flight_number, flight_name, flight_origin, flig
     sleep(0.5);
     print("ACCESSING DATABASE");
     conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+        host = "",
+        user = "",
+        password = "",
+        database = ""
     )
     cur = conn.cursor()
     sleep(3);
@@ -259,10 +259,10 @@ class flightClass():
     def newFlightNumber(ID, new_flight_number):
         print("\nACCESSING DATABASE");
         conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+            host = "",
+            user = "",
+            password = "",
+            database = ""
         )
         cur = conn.cursor()
         sleep(3);
@@ -283,10 +283,10 @@ class flightClass():
     def newFlightName(ID, new_flight_name):
         print("\nACCESSING DATABASE");
         conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+            host = "",
+            user = "",
+            password = "",
+            database = ""
         )
         cur = conn.cursor()
         sleep(3);
@@ -304,10 +304,10 @@ class flightClass():
     def newFlightOrigin(ID, new_flight_origin):
         print("\nACCESSING DATABASE");
         conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+            host = "",
+            user = "",
+            password = "",
+            database = ""
         )
         cur = conn.cursor()
         sleep(3);
@@ -325,10 +325,10 @@ class flightClass():
     def newFlightDestination(ID, new_flight_destination):
         print("\nACCESSING DATABASE");
         conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+            host = "",
+            user = "",
+            password = "",
+            database = ""
         )
         cur = conn.cursor()
         sleep(3);
@@ -346,10 +346,10 @@ class flightClass():
     def newFlightTime(ID, new_flight_time):
         print("\nACCESSING DATABASE");
         conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+            host = "",
+            user = "",
+            password = "",
+            database = ""
         )
         cur = conn.cursor()
         sleep(3);
@@ -367,10 +367,10 @@ class flightClass():
     def newFlightAmount(ID, new_flight_amount):
         print("\nACCESSING DATABASE");
         conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+            host = "",
+            user = "",
+            password = "",
+            database = ""
         )
         cur = conn.cursor()
         sleep(3);
@@ -388,10 +388,10 @@ class flightClass():
     def deleteFlightFromDatabase(ID):
         print("ACCESSING DATABASE")
         conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+            host = "",
+        user = "",
+        password = "",
+        database = ""
         )
         cur = conn.cursor()
         sleep(3);
@@ -458,10 +458,10 @@ class flightClass():
     def searchDpartureAndArrivalInDatabase(ID):
         print("ACCESSING DATABASE")
         conn = SQLConn.connect(
-        host = "localhost",
-        user = "root",
-        password = "Tomorrowuser2021",
-        database = "airlines_system_database_version2"
+            host = "",
+            user = "",
+            password = "",
+            database = ""
         )
         cur = conn.cursor()
         sleep(3);
