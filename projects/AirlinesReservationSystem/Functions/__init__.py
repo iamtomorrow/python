@@ -33,7 +33,7 @@ actual_year = datetime.now().year;
 
 userInformation = [];
 
-conn = mySQL.connect(host="localhost", user="root", password="Tomorrowuser2021", database="airlines_system_database_version2");
+conn = mySQL.connect(host="", user="", password="", database="");
 cur = conn.cursor();
 
 def exitOrNotFunction():
