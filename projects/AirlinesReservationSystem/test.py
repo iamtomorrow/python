@@ -28,8 +28,11 @@ print(searchCodeCountry(country))'''
 
 '''userId = 3
 databaseconnection.insertUserID(userId);
+'''host = "",
+    user = "",
+    password = "",
+    database = ""
 '''
-'''conn = mySQL.connect(host="localhost", user="root", password="Tomorrowuser2021", database="databasecenter");
 
 cur = conn.cursor();
 
