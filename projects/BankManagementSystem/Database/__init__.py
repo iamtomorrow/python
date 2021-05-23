@@ -7,10 +7,10 @@ import psycopg2;
 class databaseConnection:
     try:
         connection = psycopg2.connect(user = "postgres",
-                                      password = "Tomorrowuser2021",
+                                      password = "password",
                                       host = "localhost",
                                       port = "5432",
-                                      database = "BankManagementDatabase");
+                                      database = "databasename");
         cur = connection.cursor();
     except Exception  as exc:
         print(exc);
@@ -20,10 +20,10 @@ class databaseConnection:
 def getNewCustomerID():
     try:
         connection = psycopg2.connect(user = "postgres",
-                                     password = "Tomorrowuser2021",
-                                     host = "localhost",
-                                     port = "5432",
-                                     database = "BankManagementDatabase");
+                                      password = "password",
+                                      host = "localhost",
+                                      port = "5432",
+                                      database = "databasename");
         cur = connection.cursor();
 
         query = "SELECT customer_id FROM customers ORDER BY customer_id DESC LIMIT 1";
@@ -48,10 +48,10 @@ def getNewCustomerID():
 def insertCustomerToDatabase(customerID, customerStName, customerNdName, customerLastName, customerBirthdate, customerCountry, customerCity, customerPhone, customerEmail, customerAge, dateBecomeCustomer, customerCitizenNumber, customerUsername, customerPassword):
     try:
         connection = psycopg2.connect(user = "postgres",
-                                      password = "Tomorrowuser2021",
+                                      password = "password",
                                       host = "localhost",
                                       port = "5432",
-                                      database = "BankManagementDatabase");
+                                      database = "databasename");
         cur = connection.cursor();
 
         # here, the function will execute the main propose of it;
@@ -76,10 +76,10 @@ def insertCustomerToDatabase(customerID, customerStName, customerNdName, custome
 def confirmNewUsername(un):
     try:
         connection = psycopg2.connect(user = "postgres",
-                                      password = "Tomorrowuser2021",
+                                      password = "password",
                                       host = "localhost",
                                       port = "5432",
-                                      database = "BankManagementDatabase");
+                                      database = "databasename");
         cur = connection.cursor();
         query = f"SELECT customer_username FROM customers WHERE customer_username = '{un}'";
         cur.execute(query);
@@ -94,10 +94,10 @@ def confirmNewUsername(un):
 def findCustomerUsernameFromDatabase(un):
     try:
         connection = psycopg2.connect(user = "postgres",
-                                      password = "Tomorrowuser2021",
+                                      password = "password",
                                       host = "localhost",
                                       port = "5432",
-                                      database = "BankManagementDatabase");
+                                      database = "databasename");
         cur = connection.cursor();
 
         query = f"SELECT * FROM customers WHERE customer_username = '{un}'";
@@ -125,10 +125,10 @@ def findCustomerUsernameFromDatabase(un):
 def findCustomerPasswordFromDatabase(un, pw):
     try:
         connection = psycopg2.connect(user = "postgres",
-                                      password = "Tomorrowuser2021",
+                                      password = "password",
                                       host = "localhost",
                                       port = "5432",
-                                      database = "BankManagementDatabase");
+                                      database = "databasename");
         cur = connection.cursor();
         query = f"SELECT * FROM customers WHERE customer_username = '{un}' AND customer_password = '{pw}'";
         cur.execute(query);
@@ -147,12 +147,12 @@ def findCustomerPasswordFromDatabase(un, pw):
 
 def findCustomerAccountFromCitizenNumber(citizenNumber, pw):
         try:
-            connection = psycopg2.connect(user = "postgres",
-                                        password = "Tomorrowuser2021",
-                                        host = "localhost",
-                                        port = "5432",
-                                        database = "BankManagementDatabase");
-            cur = connection.cursor();
+           connection = psycopg2.connect(user = "postgres",
+                                      password = "password",
+                                      host = "localhost",
+                                      port = "5432",
+                                      database = "databasename");
+        cur = connection.cursor();
             try:            
                 query = f"SELECT * FROM customers WHERE customer_citizen_number = '{citizenNumber}' AND customer_password = '{pw}'";
                 cur.execute(query);
@@ -170,10 +170,10 @@ def findCustomerAccountFromCitizenNumber(citizenNumber, pw):
 def findAccountNumber(n):
     try:
         connection = psycopg2.connect(user = "postgres",
-                                      password = "Tomorrowuser2021",
+                                      password = "password",
                                       host = "localhost",
                                       port = "5432",
-                                      database = "BankManagementDatabase");
+                                      database = "databasename");
         cur = connection.cursor();
         query = f"SELECT * FROM accounts WHERE account_number = {n}";
         cur.execute(query);
@@ -356,10 +356,10 @@ class removeAccount(databaseConnection):
 def checkAccountAmount(accountNumber):
     try:
         connection = psycopg2.connect(user = "postgres",
-                                      password = "Tomorrowuser2021",
+                                      password = "password",
                                       host = "localhost",
                                       port = "5432",
-                                      database = "BankManagementDatabase");
+                                      database = "databasename");
         cur = connection.cursor();
         query = f"SELECT current_amount FROM accounts WHERE account_number = {accountNumber}";
         cur.execute(query);
