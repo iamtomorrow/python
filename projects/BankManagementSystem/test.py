@@ -7,10 +7,11 @@ import psycopg2
 
 class classConnection:
     try:
-        connection = psycopg2.connect(user="postgres",
-                                            port = "5432",
-                                            password="Tomorrowuser2021",
-                                            database="BankManagementDatabase");
+        connection = psycopg2.connect(user = "postgres",
+                                      password = "password",
+                                      host = "localhost",
+                                      port = "5432",
+                                      database = "databasename");
         cur = connection.cursor();
     except Exception as exc:
         print(exc);
@@ -60,11 +61,11 @@ print(type(custBirthDate))
 
 '''try:
     connection = psycopg2.connect(user = "postgres",
-                                password = "Tomorrowuser2021",
-                                host = "localhost",
-                                port = "5432",
-                                database = "testingDataPostgreSQL")
-    cur = connection.cursor();
+                                      password = "password",
+                                      host = "localhost",
+                                      port = "5432",
+                                      database = "databasename");
+        cur = connection.cursor();
     print("Connected!");
     sleep(2)
 
